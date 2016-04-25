@@ -1,0 +1,82 @@
+[24-Apr-2016 06:33:21 UTC] PHP Parse error:  syntax error, unexpected '$username' (T_VARIABLE) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 5
+[24-Apr-2016 06:34:00 UTC] PHP Parse error:  syntax error, unexpected '$username' (T_VARIABLE) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 5
+[24-Apr-2016 06:34:12 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:4) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:34:12 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:4) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:34:12 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'cp22771_todo'@'localhost' to database 'cp22771_todolist' in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 7
+[24-Apr-2016 06:35:15 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:4) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:35:15 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:4) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:35:15 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'cp22771_todo'@'localhost' (using password: YES) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 7
+[24-Apr-2016 06:36:15 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:4) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:36:15 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:4) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:36:15 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'cp22771_todo'@'localhost' (using password: YES) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 7
+[24-Apr-2016 06:38:20 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:4) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:38:20 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:4) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:38:23 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:4) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:38:23 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:4) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:39:48 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:2) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:39:48 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:2) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:39:52 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:2) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 06:39:52 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/cp22771/public_html/netintelpro.com/todolist/index.php:2) in /home/cp22771/public_html/netintelpro.com/todolist/init.php on line 2
+[24-Apr-2016 07:07:26 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 21
+[24-Apr-2016 07:08:38 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 21
+[24-Apr-2016 07:09:50 UTC] PHP Strict Standards:  Non-static method Dal::getListItems() should not be called statically in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 7
+[24-Apr-2016 07:09:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 11
+[24-Apr-2016 07:10:57 UTC] PHP Parse error:  syntax error, unexpected 'static' (T_STATIC), expecting identifier (T_STRING) in /home/cp22771/public_html/netintelpro.com/todolist/dal.php on line 5
+[24-Apr-2016 07:13:35 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 11
+[24-Apr-2016 07:15:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 11
+[24-Apr-2016 07:17:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 11
+[24-Apr-2016 07:19:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 11
+[24-Apr-2016 07:19:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 11
+[24-Apr-2016 07:20:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 11
+[24-Apr-2016 07:21:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 12
+[24-Apr-2016 07:22:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 12
+[24-Apr-2016 07:22:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 12
+[24-Apr-2016 07:22:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 12
+[24-Apr-2016 07:23:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 12
+[24-Apr-2016 07:23:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 12
+[24-Apr-2016 07:25:24 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:25:24 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:25:24 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:25:24 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:25:24 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:25:24 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:25:24 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:25:24 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:25:24 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:27:30 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:27:30 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:27:30 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:27:30 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:27:30 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:27:30 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:27:30 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:27:30 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:27:30 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:27:49 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:27:49 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:27:49 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:27:49 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:27:49 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:27:49 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:27:49 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:27:49 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:27:49 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:28:49 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:28:49 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:28:49 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:28:49 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:28:49 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:28:49 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:28:49 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 15
+[24-Apr-2016 07:28:49 UTC] PHP Warning:  Illegal string offset 'list_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:28:49 UTC] PHP Warning:  Illegal string offset 'user_id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 17
+[24-Apr-2016 07:32:27 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:32:27 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:32:27 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:32:59 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:32:59 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:32:59 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:35:31 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:35:31 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 07:35:31 UTC] PHP Warning:  Illegal string offset 'id' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 16
+[24-Apr-2016 08:15:06 UTC] PHP Fatal error:  Call to undefined method Dal::getItems() in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 9
