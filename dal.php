@@ -18,6 +18,14 @@ class Dal{
    		 header('Location: index.php');
 
 	}
+	static function delete_item($item_id){
+		$con = self::connect();
+		$list_id = self::get_list_id_by_item_id($item_id);
+		$query = "delete from items where id='$item_id'";
+   		mysqli_query($con,$query);
+   		header('Location: index.php?list_id='.$list_id);
+
+	}
 
 	static function edit_item($item_id,$content)
 	{

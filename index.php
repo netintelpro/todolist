@@ -5,6 +5,13 @@
 <html>
 <head>
 <style>
+
+#content_container{}
+
+#item_heading{
+	position:relative;
+	top:-6px;
+}
 input#name,input#new_list_button {
 	margin: 5px;
 }
@@ -21,6 +28,7 @@ ul#login, ul#register{
 	width:82%;
 	height:1000px;
 	float:right;
+	margin-top: 24px;
 
 
 }
@@ -60,13 +68,14 @@ input#list_name{
 		<?php } ?>
 	</div>
 	<div id="content">	
-	<h2>Items</h2>
+<div id="content_container">
+	<h2 id="item_heading">Items</h2>
 	<?php 
 		$list_id = $_GET['list_id'];
 
 	    if ($list_id != '')
 	    {?>
-			<h3><?php echo dal::get_list_name_by_id($list_id);?></h3>
+			
 		
 	<form style="margin: 0; padding: 0;" action="create_item.php" method="post">
   <p>
@@ -75,6 +84,7 @@ input#list_name{
     <input style="display: inline;" type="submit" value="Create New Item" />
   </p>
 </form>
+<h3><?php echo dal::get_list_name_by_id($list_id);?></h3>
 <?php }?>
 	<?php 
 	    
@@ -90,6 +100,7 @@ input#list_name{
 			            <td><?php echo $item['content']; ?></td>
 			            <td><?php echo $item['time_complete']; ?></td>
 			            <td><input type="button" value="Edit"onclick="var content = '<?php echo $item['content']?>'; editItem(<?php echo $item['id'];?>,content);"></td>
+					    <td><input type="button" value="Delete Item"onclick="confirmDeleteItem(<?php echo $item['id']; ?>)"></td>
 
 					</tr>
 					<?php } ?>
@@ -98,6 +109,7 @@ input#list_name{
 		<?php } ?>
 
 	</div>
+</div>
 	<?php } else{?>
 
 	
@@ -158,13 +170,16 @@ input#list_name{
 	<?php }?>
 <script>
 function confirmDelete(list_id) {
-    var x;
+    
     if (confirm("Are you sure you want to Delete this List?") == true) {
         window.location.assign("delete_list.php?list_id="+list_id);
-    } else {
-        x = "You pressed Cancel!";
-    }
-    document.getElementById("demo").innerHTML = x;
+    } 
+}
+function confirmDeleteItem(item_id) {
+    
+    if (confirm("Are you sure you want to Delete this Item?") == true) {
+        window.location.assign("delete_item.php?item_id="+item_id);
+    } 
 }
 
 function editItem(item_id,content) {
