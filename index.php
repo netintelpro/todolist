@@ -5,7 +5,10 @@
 <html>
 <head>
 <style>
+.item_complete{
+	text-decoration: line-through;
 
+}
 #content_container{}
 
 #item_heading{
@@ -38,7 +41,7 @@ input#list_name{
     margin-left: 10%;
 }
 </style></head>
-<body>
+<body  >
 <?php if (isset($_SESSION['user_id'])) { ?>
 	<div id="sidebar">
 		<a href="logout.php">Log Out</a>
@@ -69,7 +72,10 @@ input#list_name{
 	</div>
 	<div id="content">	
 <div id="content_container">
-	<h2 id="item_heading">Items</h2>
+	
+		<h2 id="item_heading">Items</h2>
+		
+
 	<?php 
 		$list_id = $_GET['list_id'];
 
@@ -84,27 +90,49 @@ input#list_name{
     <input style="display: inline;" type="submit" value="Create New Item" />
   </p>
 </form>
-<h3><?php echo dal::get_list_name_by_id($list_id);?></h3>
+<span>
+	<h3><?php echo dal::get_list_name_by_id($list_id);?></h3>
+	<select  id="list_filter" name="list_filter"  onchange="filterSelect(<?php echo $list_id;?>);">
+		  <option value="all">All</option>
+		  <option value="incomplete">Incomplete</option>
+		  <option value="complete">Complete</option>
+	</select>
+</span>
+
 <?php }?>
 	<?php 
-	    
+	    if ($_GET['complete'] == 'true')
+	    	$complete = 'true';
+	    else if ($_GET['complete'] == 'false') 
+	    	$complete = 'false';
+	    else
+	    	$complete = 'all';
+
 	    if ($list_id != '')
 	    {
-			$items = dal::getItems($list_id);
+			$items = dal::getItems($list_id,$complete);
 			if ($items != null)
 			{?>
 				<table>
+
 				<?php foreach($items as $item)
 					{ ?>
 					<tr>
-			            <td><?php echo $item['content']; ?></td>
+						<td><input style="<?php if ($item['complete']=='true') echo'display:none;';?>" type="checkbox" id="item_<?php echo $item['id'] ?>" class="item_checkbox" onchange="completeItem(<?php echo $item['id']; ?>);"></td>
+			            <td><p class="<?php if ($item['complete']=='true') echo'item_complete';?>"><?php echo $item['content']; ?><p></td>
 			            <td><?php echo $item['time_complete']; ?></td>
 			            <td><input type="button" value="Edit"onclick="var content = '<?php echo $item['content']?>'; editItem(<?php echo $item['id'];?>,content);"></td>
 					    <td><input type="button" value="Delete Item"onclick="confirmDeleteItem(<?php echo $item['id']; ?>)"></td>
 
 					</tr>
 					<?php } ?>
-				</table>	
+					<tr>
+						<td><input type="button" value="Email List"onclick="emailList(<?php echo $list_id; ?>);"></td>
+						<td><input type="button" value="Print List"onclick="printList(<?php echo $list_id; ?>);"></td>
+
+					</tr>
+				</table>
+
 			<?php } ?>
 		<?php } ?>
 
@@ -191,8 +219,46 @@ function editItem(item_id,content) {
 
 
 }
-function test()
-{alert('test!');}
+
+function completeItem(item_id){
+    
+    if (confirm("Are you sure this Item is Complete?") == true) {
+        window.location.assign("complete_item.php?item_id="+item_id);
+    } 
+    else
+    	document.getElementById("item_"+item_id).checked = false;
+ }
+
+ function filterSelect(list_id){
+ 	var filter = document.getElementById("list_filter").value;
+ 	switch(filter) {
+    case 'complete':
+        window.location.assign("index.php?list_id="+list_id+"&complete=true");
+		break;
+    case 'incomplete':
+        window.location.assign("index.php?list_id="+list_id+"&complete=false");
+		break;
+    default:
+        window.location.assign("index.php?list_id="+list_id);
+	
+	}
+}
+function printList(list_id){
+	   window.location.assign("print_list.php?list_id="+list_id+"&email="+friends_email);
+
+}
+function emailList(list_id){
+	var friends_email = prompt("Enter email address: ", "");
+    
+    if (friends_email!= null) {
+        window.location.assign("email_list.php?list_id="+list_id+"&email="+friends_email);
+    }
+ 
+}
+
+
+ 
+
 
 </script>
 

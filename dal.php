@@ -26,6 +26,14 @@ class Dal{
    		header('Location: index.php?list_id='.$list_id);
 
 	}
+	static function complete_item($item_id){
+		$con = self::connect();
+		$list_id = self::get_list_id_by_item_id($item_id);
+    	$query = "update items set complete = 'true',time_complete = now() where id ='$item_id';";
+   		mysqli_query($con,$query);
+   		header('Location: index.php?list_id='.$list_id);
+
+	}
 
 	static function edit_item($item_id,$content)
 	{
@@ -99,7 +107,8 @@ class Dal{
     {
     	$con = self::connect();
 
-    	$query = "select * from lists where user_id = '$user_id'";
+
+		$query = "select * from lists where user_id = '$user_id'";
     	$result = mysqli_query($con,$query);
 
 			$i=0;
@@ -173,12 +182,43 @@ class Dal{
 
     }
 
-	static function getItems($list_id)
+    static function get_list_for_email($list_id,$complete){
+    	$output = "";
+    	$items = self::getItems($list_id,$complete);
+			if ($items != null)
+			{
+				foreach($items as $item){
+					$output .= $item['content']."\n";
+				}
+			}
+		return $output;
+    }
+    static function email_list($list_id,$email)
+    {
+        $to = $email;
+		$subject = "You're ".self::get_list_name_by_id($list_id)." List";
+		$body = "DONE"."\n";
+		$body .= self::get_list_for_email($list_id,'true');
+		$body .= "TO DO"."\n";
+		$body .= self::get_list_for_email($list_id,'false');
+
+		$headers = "From: todolist@netintelpro.com" . "\r\n" ."CC: john.kenneth.williams@gmail.com";
+		mail($to,$subject,$body,$headers);
+		header('Location: index.php?list_id='.$list_id);
+
+
+    }
+
+
+	static function getItems($list_id,$complete ='all')
 	{
 		$con = self::connect();
-
-
-		$query = "select * from items where list_id='".$list_id."';";
+        if ($complete == 'true')
+    		$query = "select * from items where list_id = '$list_id' and complete = 'true'";
+        else if ($complete =='false')
+        	$query = "select * from items where list_id = '$list_id' and complete = 'false'";
+    	else
+    		$query = "select * from items where list_id = '$list_id'";
 		$result = mysqli_query($con,$query);
 
 			$i=0;
