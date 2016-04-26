@@ -193,3 +193,7 @@
 [26-Apr-2016 03:00:09 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/cp22771/public_html/netintelpro.com/todolist/dal.php:41) in /home/cp22771/public_html/netintelpro.com/todolist/dal.php on line 47
 [26-Apr-2016 03:00:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cp22771/public_html/netintelpro.com/todolist/dal.php:41) in /home/cp22771/public_html/netintelpro.com/todolist/dal.php on line 50
 [26-Apr-2016 03:52:43 UTC] PHP Warning:  Missing argument 1 for Dal::getLists(), called in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 32 and defined in /home/cp22771/public_html/netintelpro.com/todolist/dal.php on line 53
+[26-Apr-2016 05:47:28 UTC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 66
+[26-Apr-2016 06:34:47 UTC] PHP Parse error:  syntax error, unexpected 'username' (T_STRING) in /home/cp22771/public_html/netintelpro.com/todolist/dal.php on line 21
+[26-Apr-2016 06:36:09 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cp22771/public_html/netintelpro.com/todolist/delete_list.php on line 3
+[26-Apr-2016 07:11:47 UTC] PHP Parse error:  syntax error, unexpected 'content' (T_STRING), expecting ',' or ';' in /home/cp22771/public_html/netintelpro.com/todolist/index.php on line 90

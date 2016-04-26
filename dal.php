@@ -9,6 +9,15 @@ class Dal{
 		$dbname = "cp22771_todolist";
 		return mysqli_connect($hostname,$username,$password,$dbname);
 	}
+	static function delete_list($list_id){
+		$con = self::connect();
+    	 $query = "delete from lists where id='$list_id'";
+   		 mysqli_query($con,$query);
+   		 $query = "delete from items where list_id='$list_id'";
+   		 mysqli_query($con,$query);
+   		 header('Location: index.php');
+
+	}
     static function register()
     {
     	$username = trim($_POST['username']);
@@ -20,6 +29,13 @@ class Dal{
    		session_start();
    		$_SESSION['user_id'] = mysqli_insert_id($con);
 		header('Location: index.php');
+    }
+    static function create_item($list_id,$content){
+    	$con = self::connect();
+    	 $query = "insert into items(`list_id`,`content`) values ('$list_id','$content');";
+   		 mysqli_query($con,$query);
+   		 header('Location: index.php?list_id='.$list_id);
+
     }
 
     static function create_list($user_id,$name)
@@ -88,10 +104,20 @@ class Dal{
     static function get_user_by_id($user_id)
     {
     	$con = self::connect();
-    	$query = "select * from users where user_id = '$user_id'";
+    	$query = "select * from users where id = '$user_id'";
     	$result = mysqli_query($con, $query); 
 		$row = mysqli_fetch_array($result,MYSQLI_BOTH);
 		return $row;
+
+    }
+
+    static function get_list_name_by_id($list_id)
+    {
+    	$con = self::connect();
+    	$query = "select name from lists where id = '$list_id'";
+    	$result = mysqli_query($con, $query); 
+		$row = mysqli_fetch_array($result,MYSQLI_BOTH);
+		return $row['name'];
 
     }
     static function get_user_id_by_email($email)
@@ -110,6 +136,16 @@ class Dal{
     	$result = mysqli_query($con, $query); 
 		$row = mysqli_fetch_array($result,MYSQLI_BOTH);
 		return $row['user_id'];
+
+    }
+
+    static function get_username_by_id($user_id)
+    {
+    	$con = self::connect();
+    	$query = "select username from users where id = '$user_id'";
+    	$result = mysqli_query($con, $query); 
+		$row = mysqli_fetch_array($result,MYSQLI_BOTH);
+		return $row['username'];
 
     }
 
