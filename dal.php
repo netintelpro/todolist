@@ -18,6 +18,16 @@ class Dal{
    		 header('Location: index.php');
 
 	}
+
+	static function edit_item($item_id,$content)
+	{
+		$con = self::connect();
+    	 $query = "update items set content = '$content' where id ='$item_id';";
+   		 mysqli_query($con,$query);
+   		 $list_id = self::get_list_id_by_item_id($item_id);
+   		 header('Location: index.php?list_id='.$list_id);
+
+	}
     static function register()
     {
     	$username = trim($_POST['username']);
@@ -110,7 +120,13 @@ class Dal{
 		return $row;
 
     }
-
+    static function get_list_id_by_item_id($item_id){
+    	$con = self::connect();
+    	$query = "select list_id from items where id = '$item_id'";
+    	$result = mysqli_query($con, $query); 
+		$row = mysqli_fetch_array($result,MYSQLI_BOTH);
+		return $row['list_id'];
+    }
     static function get_list_name_by_id($list_id)
     {
     	$con = self::connect();

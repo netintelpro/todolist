@@ -5,18 +5,20 @@
 <html>
 <head>
 <style>
-
+input#name,input#new_list_button {
+	margin: 5px;
+}
 ul#login, ul#register{
 	list-style-type: none;
 }
 #sidebar {
     	background-color:grey;
-    	width:30%; 
+    	width:18%%; 
     	height:1000px;
     	float:left;
 		}
 #content{
-	width:70%;
+	width:82%;
 	height:1000px;
 	float:right;
 
@@ -38,7 +40,7 @@ input#list_name{
   <p>
   	<input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'];?>">
     <input type="text" name="name" id="name" >
-    <input style="display: inline;" type="submit" value="Create New List" />
+    <input style="display: inline;" type="submit" value="Create New List" id="new_list_button" />
   </p>
 </form>
 
