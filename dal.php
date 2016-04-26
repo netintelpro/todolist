@@ -21,6 +21,17 @@ class Dal{
    		$_SESSION['user_id'] = mysqli_insert_id($con);
 		header('Location: index.php');
     }
+
+    static function create_list($user_id,$name)
+    {
+    	 $con = self::connect();
+    	 $query = "insert into lists(`user_id`,`name`) values ('$user_id','$name');";
+   		 mysqli_query($con,$query);
+   		 header('Location: index.php');
+
+
+
+    }
      static function get_user_by_email($email)
     {
     	$con = self::connect();

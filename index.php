@@ -20,6 +20,12 @@ ul#login, ul#register{
 	height:1000px;
 	float:right;
 
+
+}
+
+input#list_name{
+	width: 61%;
+    margin-left: 10%;
 }
 </style></head>
 <body>
@@ -28,6 +34,14 @@ ul#login, ul#register{
 		<a href="logout.php">Log Out</a>
 
 		<h2>Lists</h2>
+		<form style="margin: 0; padding: 0;" action="create_list.php" method="post">
+  <p>
+  	<input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'];?>">
+    <input type="text" name="name" id="name" >
+    <input style="display: inline;" type="submit" value="Create New List" />
+  </p>
+</form>
+
 	<?php 
 		$lists = dal::getLists($_SESSION['user_id']);
 		if ($lists != null)
@@ -125,5 +139,7 @@ ul#login, ul#register{
 
 
 	<?php }?>
+
+
 </body>
 </html>
